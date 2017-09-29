@@ -1,9 +1,19 @@
 require "./lib/stockex/equity"
+require "./lib/stockex"
+
 
 s = Stockex::Equity
-#apikey = "YOURAPIKEYHERE" #TODO: place your api key here
+
+#TODO: configure your api key here:
+
+Stockex.configure do |config|
+  config.api_key = "YOURAPIKEYHERE"
+end
+
+apikey = Stockex.configuration.api_key
+
 #To run any of the test you can uncomment the methods below
-# and in the console from the root directory run ruby test/run_sample_test.rb
+# and in the console from the root directory run 'ruby test/run_sample_test.rb'
 
 ## Quotes methods:
 

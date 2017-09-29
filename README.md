@@ -28,6 +28,23 @@ In order to use the methods from this gem you will need to get an API key from -
 
 You will need to use your API key when you call methods in Stockex. Your API should be a String value.  
 
+To configure your API Key, place the following code in your application:
+
+```ruby
+
+Stockex.configure do |config|
+  config.api_key = ENV['STOCKEX_KEY']
+end
+
+```
+Use a variable to store your API Key:
+
+```ruby
+
+apikey = Stockex.configuration.api_key # => "YOURAPIKEY"
+
+```
+
 #### Intraday Values:
 
 To get values for _intraday time series_ (timestamp, open, high, low, close, volume):
@@ -96,7 +113,13 @@ Stockex::Equity.get_time_series_weekly("GOOGL", "YOURAPIKEY", 3)
 
 Technical indicator values are updated realtime: the latest data point is derived from the current trading day of a given equity.
 
-Available values - OBV, A/D Line, ADX, Aroon, SMA, RSI
+Available values:
+  - OBV: on balance volume
+  - A/D Line: Chaikin A/D line
+  - ADX: average directional movement index
+  - Aroon: Aroon values
+  - SMA: simple moving average
+  - RSI: relative strength index
 
 #### OBV
 
@@ -155,7 +178,13 @@ Please consider:
 
 
   - Fork the project and clone it locally.
-  - Write a failing test. You can write the test in `run_sample_test.rb` file
+  - Write a failing test:
+    - You can write the test in the `test/run_sample_test.rb` file.
+    - To prevent an accidental push of your API code, it's best to:
+      - copy the code from `run_sample_test.rb` to a .dot file (e.g: `test/.local_test_samples.rb`),
+      - add this .dot file to your `.gitignore` directory.
+      - You can do all your testing in this .dot file.
+      - When you are happy with your work, make sure to write the test in the `run_sample_test.rb` file.
   - Commit changes that fix the tests.
   - Submit a pull request.
 

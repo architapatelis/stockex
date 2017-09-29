@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'stockex/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "stockex"
-  spec.version       = Stockex::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Archita Patel"]
   spec.email         = ["architapatelis@gmail.com"]
 
@@ -13,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Stockex is a Ruby Gem used for fetching realtime and historical stock market data.}
   spec.homepage      = "https://github.com/architapatelis/stockex"
   spec.license       = "MIT"
-  
+
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"

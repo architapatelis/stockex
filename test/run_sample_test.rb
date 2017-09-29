@@ -2,8 +2,8 @@ require "./lib/stockex/equity"
 
 s = Stockex::Equity
 #apikey = "YOURAPIKEYHERE" #TODO: place your api key here
-
-#To run any of the test you can uncomment the methods below:
+#To run any of the test you can uncomment the methods below
+# and in the console from the root directory run ruby test/run_sample_test.rb
 
 ## Quotes methods:
 
@@ -49,13 +49,14 @@ s = Stockex::Equity
 #7
 #p s.get_value_for_specific_year("MSFT", 2016, apikey) #works
 
+#8
 #p s.get_current_high('MSFT', apikey) #works
 
 #9
 #p s.get_current_low('MSFT', apikey) #works
 
 #10
-#p Equity::Stocks.get_current_volume('MSFT', apikey) # works
+#p s.get_current_volume('MSFT', apikey) # works
 
 
 #******************************************************************************

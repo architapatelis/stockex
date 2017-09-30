@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/architapatelis/stockex"
   spec.license       = "MIT"
 
-  spec.files         = Dir['lib/**/*.rb']
+  spec.files         = Dir['lib/stockex.rb', 'lib/**/*.rb']
   spec.require_paths = ["lib"]
 
 

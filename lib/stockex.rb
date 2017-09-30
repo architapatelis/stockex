@@ -1,4 +1,5 @@
-require './lib/stockex/configuration'
+require 'stockex/configuration'
+require 'stockex/stocks'
 
 #the configuration method will allow users of this gem to configure their API Key.
 module Stockex

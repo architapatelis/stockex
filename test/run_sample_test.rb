@@ -1,5 +1,4 @@
-require "./lib/stockex/equity"
-require "./lib/stockex"
+require "spec_helper"
 
 
 s = Stockex::Equity

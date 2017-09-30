@@ -1,8 +1,8 @@
 require "httparty"
 require 'json'
-require './lib/stockex/quotes'
-require './lib/stockex/indicators'
-require './lib/stockex/sector'
+require 'stockex/quotes'
+require 'stockex/indicators'
+require 'stockex/sector'
 
 module Stockex
   class Equity

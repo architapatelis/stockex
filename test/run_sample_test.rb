@@ -1,4 +1,4 @@
-require "stockex/stocks"
+require "stockex/equity"
 require "stockex"
 
 

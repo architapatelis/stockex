@@ -1,5 +1,5 @@
 require 'stockex/configuration'
-require 'stockex/stocks'
+require 'stockex/equity'
 
 #the configuration method will allow users of this gem to configure their API Key.
 module Stockex

@@ -1,1 +1,2 @@
-# Upon release place version and it's details here:
+0.1.0 / 2017-10-02
+  - Initial release!

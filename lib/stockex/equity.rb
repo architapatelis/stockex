@@ -3,11 +3,14 @@ require 'json'
 require 'stockex/quotes'
 require 'stockex/indicators'
 require 'stockex/sector'
+require 'stockex/values'
+
 
 module Stockex
   class Equity
     extend HTTParty
     include Quotes
+    include Values
     include Indicators
     include Sector
 
